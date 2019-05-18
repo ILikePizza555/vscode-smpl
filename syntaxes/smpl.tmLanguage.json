@@ -10,7 +10,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.other.metavaraible.delcaration",
+					"name": "keyword.other.metavariable.delcaration",
 					"match": "(metavariable)|(fresh)|(identifier)|(parameter)|(list)|(type)|(statement)|(declaration)|(field)|(typedef)|(attribute)|(declarer)|(name)|(iterator)|(local)|(global)|(expression)|(enum)|(struct)|(union)|(constant)|(position)|(symbol)|(format)|(assignment)|(binary)|(operator)"
 				},
 				{
@@ -33,7 +33,7 @@
 		},
 		"rulename_expression": {
 			"name": "entity.rulebegin",
-			"match": "@(\\S*)(extends (\\S*))?(depends on (.+))?(using ([\\S,]+))?(disable ([\\S,]+))?(exists|forall)?(.)*@",
+			"match": "@(\\S*)?(extends (\\S*))?(depends on (.+))?(using ([\\S,]+))?(disable ([\\S,]+))?(exists|forall)?(.)*@",
 			"captures": {
 				"1": {"name": "entity.name.rule"},
 					"2": {"name": "entity.other.extends"},
