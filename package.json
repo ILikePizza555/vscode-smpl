@@ -6,6 +6,8 @@
     "engines": {
         "vscode": "^1.34.0"
     },
+    "publisher": "Izzy",
+    "repository": "https://github.com/ILikePizza555/vscode-smpl",
     "categories": [
         "Programming Languages"
     ],
