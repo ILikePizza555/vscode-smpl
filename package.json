@@ -1,0 +1,25 @@
+{
+    "name": "vscode-smpl",
+    "displayName": "vscode-smpl",
+    "description": "Language support for SmPL",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.34.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "smpl",
+            "aliases": ["SmPL", "smpl"],
+            "extensions": [".smpl",".cocci"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "smpl",
+            "scopeName": "source.smpl",
+            "path": "./syntaxes/smpl.tmLanguage.json"
+        }]
+    }
+}
