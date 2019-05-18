@@ -33,23 +33,23 @@
 			]
 		},
 		"rulename_expression": {
-			"name": "entity.rulebegin",
-			"match": "@(\\S*)?(extends (\\S*))?(depends on (.+))?(using ([\\S,]+))?(disable ([\\S,]+))?(exists|forall)?(.)*@",
-			"captures": {
-				"1": {"name": "entity.name.rule"},
-					"2": {"name": "entity.other.extends"},
-					"3": {"name": "entity.other.extends.name"},
-					"4": {"name": "entity.other.depends"},
-					"6": {"name": "entity.other.using"},
-					"8": {"name": "entity.other.disable"},
-					"10": {"name": "entity.other.exists"},
-					"11": {"name": "entity.other"}
-			}
-		},
-		"metadecl_expression": {
-			"name": "meta.metadecl",
-			"begin": "@.*@",
+			"name": "entity.rule",
+			"begin": "@(\\S*)?(extends (\\S*))?(depends on (.+))?(using ([\\S,]+))?(disable ([\\S,]+))?(exists|forall)?(.)*@",
 			"end": "@@",
+			"beginCaptures": {
+				"0": {"name": "entity.other.beginrule"},
+				"1": {"name": "entity.name.rule"},
+				"2": {"name": "entity.other.extends"},
+				"3": {"name": "entity.other.extends.name"},
+				"4": {"name": "entity.other.depends"},
+				"6": {"name": "entity.other.using"},
+				"8": {"name": "entity.other.disable"},
+				"10": {"name": "entity.other.exists"},
+				"11": {"name": "entity.other"}
+			},
+			"endCaptures": {
+				"0": {"name": "entity.other.endrule"}
+			},
 			"patterns": [
 				{"include": "#keywords"}
 			]
@@ -62,7 +62,7 @@
 				},
 				{
 					"name": "markup.inserted",
-					"match": "^+ (.*)"
+					"match": "^\\+ (.*)"
 				},
 				{
 					"name": "markup.interested",
