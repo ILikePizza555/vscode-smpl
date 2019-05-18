@@ -4,7 +4,8 @@
 	"patterns": [
 		{"include": "#keywords"},
 		{"include": "#rulename_expression"},
-		{"include": "#metadecl_expression"}
+		{"include": "#metadecl_expression"},
+		{"include": "#transformation_expression"}
 	],
 	"repository": {
 		"keywords": {
@@ -51,6 +52,22 @@
 			"end": "@@",
 			"patterns": [
 				{"include": "#keywords"}
+			]
+		},
+		"transformation_expression": {
+			"patterns": [
+				{
+					"name": "markup.deleted",
+					"match": "^- (.*)"
+				},
+				{
+					"name": "markup.inserted",
+					"match": "^+ (.*)"
+				},
+				{
+					"name": "markup.interested",
+					"match": "^\\* (.*)"
+				}
 			]
 		}
 	},
