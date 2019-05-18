@@ -2,12 +2,9 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "SmPL",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{"include": "#keywords"},
+		{"include": "#rulename_expression"},
+		{"include": "#metadecl_expression"}
 	],
 	"repository": {
 		"keywords": {
