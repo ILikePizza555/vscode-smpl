@@ -33,6 +33,23 @@
 					"match": "(exists)|(forall)"
 				}
 			]
+		},
+		"rulename_expression": {
+			"name": "entity.rulebegin",
+			"match": "@(\\S*)(extends (\\S*))?(depends on (.+))?(using ([\\S,]+))?(disable ([\\S,]+))?(exists|forall)?(.)*@",
+			"captures": {
+				"1": {"name": "entity.name.rule"},
+					"2": {"name": "entity.other.extends"},
+					"3": {"name": "entity.other.extends.name"},
+					"4": {"name": "entity.other.depends"},
+					"6": {"name": "entity.other.using"},
+					"8": {"name": "entity.other.disable"},
+					"10": {"name": "entity.other.exists"},
+					"11": {"name": "entity.other"}
+			}
+		},
+		"metadecl_expression": {
+			
 		}
 	},
 	"scopeName": "source.smpl"
