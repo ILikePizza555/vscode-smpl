@@ -49,7 +49,12 @@
 			}
 		},
 		"metadecl_expression": {
-			
+			"name": "meta.metadecl",
+			"begin": "@.*@",
+			"end": "@@",
+			"patterns": [
+				{"include": "#keywords"}
+			]
 		}
 	},
 	"scopeName": "source.smpl"
