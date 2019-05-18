@@ -11,19 +11,26 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.smpl",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.smpl",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.smpl",
-					"match": "\\\\."
+					"name": "keyword.other.metavaraible.delcaration",
+					"match": "(metavariable)|(fresh)|(identifier)|(parameter)|(list)|(type)|(statement)|(declaration)|(field)|(typedef)|(attribute)|(declarer)|(name)|(iterator)|(local)|(global)|(expression)|(enum)|(struct)|(union)|(constant)|(position)|(symbol)|(format)|(assignment)|(binary)|(operator)"
+				},
+				{
+					"name": "keyword.other.rulename.extends",
+					"match": "(extends)|(depends on)"
+				},
+				{
+					"name": "keyword.other.depends",
+					"match": "(ever)|(never)|(file in)"
+				},
+				{
+					"name": "keyword.other.iso",
+					"match": "(using)|(disable)"
+				},
+				{
+					"name": "keyword.other.exists",
+					"match": "(exists)|(forall)"
 				}
 			]
 		}
