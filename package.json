@@ -1,6 +1,6 @@
 {
     "name": "vscode-smpl",
-    "displayName": "vscode-smpl",
+    "displayName": "SmPL Language Support",
     "description": "Language support for SmPL",
     "version": "0.0.1",
     "engines": {
