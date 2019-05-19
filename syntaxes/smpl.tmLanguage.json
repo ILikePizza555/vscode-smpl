@@ -2,23 +2,18 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "SmPL",
 	"patterns": [
-		{"include": "#keywords"},
 		{"include": "#rulename_expression"},
-		{"include": "#metadecl_expression"},
 		{"include": "#transformation_expression"}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.other.metavariable.delcaration",
-					"match": "(metavariable)|(fresh)|(identifier)|(parameter)|(list)|(type)|(statement)|(declaration)|(field)|(typedef)|(attribute)|(declarer)|(name)|(iterator)|(local)|(global)|(expression)|(enum)|(struct)|(union)|(constant)|(position)|(symbol)|(format)|(assignment)|(binary)|(operator)"
-				},
-				{
-					"name": "keyword.other.depends",
-					"match": "(ever)|(never)|(file in)"
-				}
-			]
+		"metavar_expr": {
+			"name": "meta.metavar.expr.smpl",
+			"match": "^(?:((?:fresh)|(?:local)|(?:global)) )?((?:metavariable)|(?:identifier)|(?:parameter)|(?:list)|(?:type)|(?:statement)|(?:declaration)|(?:field)|(?:typedef)|(?:attribute)|(?:declarer)|(?:name)|(?:iterator)|(?:local)|(?:global)|(?:expression)|(?:enum)|(?:struct)|(?:union)|(?:constant)|(?:position)|(?:symbol)|(?:format)|(?:assignment)|(?:binary)|(?:operator))+(.*)",
+			"captures": {
+				"1": {"name": "storage.modifier.metavar.smpl"},
+				"2": {"name": "storage.type.metavar.smpl"},
+				"3": {"name": "variable.other.metavar.smpl"}
+			}
 		},
 		"rulename_expression": {
 			"name": "entity.other.rule",
@@ -45,7 +40,7 @@
 				"0": {"name": "entity.other.rule.end"}
 			},
 			"patterns": [
-				{}
+				{"include": "#metavar_expr"}
 			]
 		},
 		"transformation_expression": {
