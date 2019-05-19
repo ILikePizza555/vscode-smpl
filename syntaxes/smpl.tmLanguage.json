@@ -15,43 +15,37 @@
 					"match": "(metavariable)|(fresh)|(identifier)|(parameter)|(list)|(type)|(statement)|(declaration)|(field)|(typedef)|(attribute)|(declarer)|(name)|(iterator)|(local)|(global)|(expression)|(enum)|(struct)|(union)|(constant)|(position)|(symbol)|(format)|(assignment)|(binary)|(operator)"
 				},
 				{
-					"name": "keyword.other.rulename.extends",
-					"match": "(extends)|(depends on)"
-				},
-				{
 					"name": "keyword.other.depends",
 					"match": "(ever)|(never)|(file in)"
-				},
-				{
-					"name": "keyword.other.iso",
-					"match": "(using)|(disable)"
-				},
-				{
-					"name": "keyword.other.exists",
-					"match": "(exists)|(forall)"
 				}
 			]
 		},
 		"rulename_expression": {
 			"name": "entity.rule",
-			"begin": "@(\\S*)?(extends (\\S*))?(depends on (.+))?(using ([\\S,]+))?(disable ([\\S,]+))?(exists|forall)?(.)*@",
+			"begin": "@(\\S*)?((extends) (\\S*))?((depends on) (.+))?((using) (.+))?((disable) ([\\S,]+))?(exists|forall)?(.)*@",
 			"end": "@@",
 			"beginCaptures": {
-				"0": {"name": "entity.other.beginrule"},
-				"1": {"name": "entity.name.rule"},
-				"2": {"name": "entity.other.extends"},
-				"3": {"name": "entity.other.extends.name"},
-				"4": {"name": "entity.other.depends"},
-				"6": {"name": "entity.other.using"},
-				"8": {"name": "entity.other.disable"},
-				"10": {"name": "entity.other.exists"},
-				"11": {"name": "entity.other"}
+				"0": {"name": "entity.other.rule.begin"},
+				"1": {"name": "entity.other.rule.name"},
+				"2": {"name": "entity.other.rule.decl.extends"},
+				"3": {"name": "keyword.other.rulename.extends"},
+				"4": {"name": "entity.other.rule.extends"},
+				"5": {"name": "entity.other.rulename.decl.depends"},
+				"6": {"name": "keyword.other.rulename.extends"},
+				"7": {"name": "entity.other.rule.extends"},
+				"8": {"name": "entity.other.rule.decl.using"},
+				"9": {"name": "keyword.other.rulename.using"},
+				"10": {"name": "entity.other.rule.exists"},
+				"11": {"name": "entity.other.rule.decl.disable"},
+				"12": {"name": "keyword.other.rulename.disable"},
+				"13": {"name": "entity.other.rule.disable"},
+				"14": {"name": "keyword.other.exists"}
 			},
 			"endCaptures": {
 				"0": {"name": "entity.other.endrule"}
 			},
 			"patterns": [
-				{"include": "#keywords"}
+				{"include": "#metavar_declaration"}
 			]
 		},
 		"transformation_expression": {
