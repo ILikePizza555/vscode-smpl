@@ -21,8 +21,8 @@
 			]
 		},
 		"rulename_expression": {
-			"name": "entity.rule",
-			"begin": "@(\\S*)?((extends) (\\S*))?((depends on) (.+))?((using) (.+))?((disable) ([\\S,]+))?(exists|forall)?(.)*@",
+			"name": "entity.other.rule",
+			"begin": "@(\\S*) ?((extends) (\\S*))?((depends on) (.+))?((using) (.+))?((disable) (.+))?(exists|forall)?(.*)@",
 			"end": "@@",
 			"beginCaptures": {
 				"0": {"name": "entity.other.rule.begin"},
@@ -42,10 +42,10 @@
 				"14": {"name": "keyword.other.exists"}
 			},
 			"endCaptures": {
-				"0": {"name": "entity.other.endrule"}
+				"0": {"name": "entity.other.rule.end"}
 			},
 			"patterns": [
-				{"include": "#metavar_declaration"}
+				{}
 			]
 		},
 		"transformation_expression": {
