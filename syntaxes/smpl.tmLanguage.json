@@ -8,7 +8,7 @@
 	"repository": {
 		"metavar_expr": {
 			"name": "meta.metavar.expr.smpl",
-			"match": "^(?:((?:fresh)|(?:local)|(?:global)) )?((?:metavariable)|(?:identifier)|(?:parameter)|(?:list)|(?:type)|(?:statement)|(?:declaration)|(?:field)|(?:typedef)|(?:attribute)|(?:declarer)|(?:name)|(?:iterator)|(?:local)|(?:global)|(?:expression)|(?:enum)|(?:struct)|(?:union)|(?:constant)|(?:position)|(?:symbol)|(?:format)|(?:assignment)|(?:binary)|(?:operator))+(.*)",
+			"match": "^(?:((?:fresh)|(?:local)|(?:global)) )?((?:(?:(?:metavariable)|(?:identifier)|(?:parameter)|(?:list)|(?:type)|(?:statement)|(?:declaration)|(?:field)|(?:typedef)|(?:attribute)|(?:declarer)|(?:name)|(?:iterator)|(?:local)|(?:global)|(?:expression)|(?:enum)|(?:struct)|(?:union)|(?:constant)|(?:position)|(?:symbol)|(?:format)|(?:assignment)|(?:binary)|(?:operator)) ?)+)(.*?)",
 			"captures": {
 				"1": {"name": "storage.modifier.metavar.smpl"},
 				"2": {"name": "storage.type.metavar.smpl"},
